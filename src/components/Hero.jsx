@@ -5,9 +5,6 @@ const Hero = () => {
     <section className="hero" id="home">
       <div className="geometric-bg"></div>
       <div className="hero-content">
-        <div className="hero-badge" data-aos="fade-up">
-          Trusted Strategic Partner
-        </div>
         <h1 data-aos="fade-up" data-aos-delay="200">
           SAMGRA LOGIC
         </h1>
