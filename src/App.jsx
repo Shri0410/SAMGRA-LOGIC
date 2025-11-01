@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Mission from "./components/Mission";
 import FocusAreas from "./components/FocusAreas";
 import Audience from "./components/Audience";
+import Partners from "./components/Partners";
 import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
 
@@ -28,6 +29,7 @@ function App() {
       <Mission />
       <FocusAreas />
       <Audience />
+      <Partners />
       <CtaSection />
       <Footer />
     </div>
