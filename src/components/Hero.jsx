@@ -9,20 +9,23 @@ const Hero = () => {
           SAMGRA LOGIC
         </h1>
         <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-          Uniting Purpose with Performance
+          Integrating Growth Marketing, Digital Strategy & Sustainability
+          Communication
         </p>
         <p className="hero-description" data-aos="fade-up" data-aos-delay="400">
-          We aspire to be more than just a service provider — we aim to be your
-          <strong> trusted partner</strong>, helping you navigate complexity,
-          unlock opportunities, and strengthen your reputation in a rapidly
-          changing world.
+          We specialize in <strong>Growth Marketing</strong>,{" "}
+          <strong>Content Marketing</strong>, and{" "}
+          <strong>Digital Marketing</strong> strategies combined with{" "}
+          <strong>ESG communication</strong> and{" "}
+          <strong>Public Relations</strong> to drive measurable business impact
+          and sustainable brand growth.
         </p>
         <div className="cta-buttons" data-aos="fade-up" data-aos-delay="500">
           <a href="#focus" className="cta-button">
-            Explore Our Services
+            Explore Our Marketing Solutions
           </a>
           <a href="#contact" className="cta-button cta-button-secondary">
-            Get In Touch
+            Get Growth Audit
           </a>
         </div>
       </div>

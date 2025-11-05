@@ -40,7 +40,7 @@ const Header = () => {
           <span className="hamburger-line"></span>
         </button>
 
-        {/* Navigation Links */}
+        {/* Navigation Links - Updated for new content */}
         <ul className={`nav-links ${isMenuOpen ? "nav-links--active" : ""}`}>
           <li>
             <a
@@ -55,13 +55,13 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#Mission"
+              href="#mission"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick("mission");
               }}
             >
-              Vision
+              Our Approach
             </a>
           </li>
           <li>
@@ -72,7 +72,7 @@ const Header = () => {
                 handleNavClick("focus");
               }}
             >
-              Focus Areas
+              Services
             </a>
           </li>
           <li>
@@ -83,7 +83,18 @@ const Header = () => {
                 handleNavClick("audience");
               }}
             >
-              Our Audience
+              Expertise
+            </a>
+          </li>
+          <li>
+            <a
+              href="#partners"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("partners");
+              }}
+            >
+              Partners
             </a>
           </li>
           <li>
@@ -94,18 +105,7 @@ const Header = () => {
                 handleNavClick("cta-section");
               }}
             >
-              CtaSection
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick("contact");
-              }}
-            >
-              Contact
+              Get Started
             </a>
           </li>
         </ul>

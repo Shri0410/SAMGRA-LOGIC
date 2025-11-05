@@ -252,18 +252,6 @@ body {
   display: inline-block;
 }
 
-.mission h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: var(--accent-gold);
-  border-radius: 2px;
-}
-
 .mission-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -322,16 +310,17 @@ body {
   color: var(--primary-green);
   margin-bottom: 3rem;
 }
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: var(--accent-gold);
-  border-radius: 2px;
+.focus-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+.audi-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
 }
 
 .section-subtitle {
@@ -342,7 +331,7 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .areas-grid {
@@ -529,7 +518,7 @@ body {
 }
 
 .cta-section h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
 }
@@ -672,6 +661,7 @@ body {
   .mission h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
+    line-height: 40px;
   }
   .focus-areas {
     padding: 10px 2rem;
@@ -744,7 +734,7 @@ section {
   }
 
   .nav {
-    padding: 1rem 2rem;
+    padding: 1rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -773,9 +763,16 @@ section {
   .section-title {
     font-size: 2.2rem;
   }
+  .focus-title {
+    font-size: 2.2rem;
+  }
+  .audi-title {
+    font-size: 2.2rem;
+  }
 
   .cta-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 40px;
   }
 }
 
@@ -983,6 +980,8 @@ section {
 
 /* Footer Bottom */
 .footer-bottom {
+  display: flex;
+  justify-content: center;
   padding-top: 2rem;
   border-top: 1px solid var(--border-light);
 }
@@ -1036,8 +1035,8 @@ section {
 
   .footer-main {
     gap: 2rem;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
   }
 
   .footer-links {
@@ -1052,6 +1051,14 @@ section {
 
   .cta-content h4 {
     font-size: 1.5rem;
+  }
+  .focus-title {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .audi-title {
+    font-size: 2rem;
+    line-height: 40px;
   }
 
   .footer-bottom-content {
@@ -1306,7 +1313,7 @@ section {
 
 .partnership-benefits h3 {
   color: var(--primary-green);
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 3rem;
   font-weight: 700;
 }

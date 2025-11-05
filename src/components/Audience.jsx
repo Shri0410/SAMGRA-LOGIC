@@ -3,70 +3,74 @@ import React from "react";
 const Audience = () => {
   const audiences = [
     {
-      title: "C-Suite Executives & Business Leaders",
+      title: "Marketing Directors & CMOs",
       expectations: [
-        "Strategic solutions aligning with business objectives",
-        "Clear evidence of measurable impact and ROI",
-        "Confidence in reputation protection and strengthening",
-        "Quick understanding of challenge solutions",
-        "Case studies and proven expertise",
+        "Growth marketing strategies that deliver measurable ROI",
+        "Integrated digital marketing campaigns",
+        "Content marketing that drives engagement and conversions",
+        "Data-driven performance optimization",
+        "Brand storytelling and narrative development",
       ],
     },
     {
-      title: "Sustainability, ESG & CSR Leaders",
+      title: "Sustainability & ESG Leaders",
       expectations: [
-        "Expertise in sustainability communication challenges",
-        "Experience in environmental projects",
-        "Translation of ESG data into compelling narratives",
-        "Knowledge of global reporting frameworks",
-        "Support in building authentic sustainability stories",
+        "ESG communication strategies that build credibility",
+        "Sustainability marketing and reporting",
+        "Stakeholder engagement through public relations",
+        "Green marketing and eco-branding",
+        "Impact measurement and communication",
       ],
     },
     {
-      title: "Communications & Marketing Leaders",
+      title: "Digital Marketing Teams",
       expectations: [
-        "Trusted strategic partnership",
-        "Integrated communication solutions",
-        "Crisis management expertise",
-        "Creative campaign ideas",
-        "Tools and analytics for effectiveness",
+        "Growth-focused digital marketing strategies",
+        "Content marketing frameworks and execution",
+        "SEO and SEM optimization",
+        "Social media and email marketing campaigns",
+        "Marketing automation and CRM integration",
       ],
     },
     {
-      title: "Governance & Compliance Officers",
+      title: "Public Relations Professionals",
       expectations: [
-        "Comprehensive CSR and ESG reports",
-        "Regulatory communication clarity",
-        "Transparent and accountable messaging",
-        "Simplified governance structures",
-        "Crisis preparedness strategies",
+        "Integrated PR and marketing strategies",
+        "Media relations and press coverage",
+        "Crisis communication management",
+        "Stakeholder communication plans",
+        "Brand reputation management",
       ],
     },
     {
-      title: "Investors & Board Members",
+      title: "Business Growth Leaders",
       expectations: [
-        "Increased shareholder value assurance",
-        "Corporate reputation protection",
-        "Strategic insights for governance",
-        "Long-term business resilience",
+        "Full-funnel growth marketing solutions",
+        "Customer acquisition and retention strategies",
+        "Market expansion through digital channels",
+        "Brand positioning and competitive advantage",
+        "Revenue growth and market share expansion",
       ],
     },
     {
-      title: "Industry Influencers & Media",
+      title: "Corporate Communications",
       expectations: [
-        "Thought-leadership content",
-        "Expert commentary with credibility",
-        "Media-ready perspectives",
-        "Agenda-setting insights",
+        "Integrated marketing and communication strategies",
+        "ESG and sustainability storytelling",
+        "Internal and external communication alignment",
+        "Crisis communication preparedness",
+        "Stakeholder engagement programs",
       ],
     },
   ];
 
   return (
     <section className="audience" id="audience">
-      <h2 className="section-title" data-aos="fade-up">
-        Our Primary Audiences
-      </h2>
+      <h2 className="audi-title">Our Core Expertise Areas</h2>
+      <p className="section-subtitle">
+        Specialized solutions for marketing, communication, and sustainability
+        professionals
+      </p>
       <div className="audience-grid">
         {audiences.map((audience, index) => (
           <div

@@ -3,52 +3,52 @@ import React from "react";
 const FocusAreas = () => {
   const areas = [
     {
-      icon: "🌱",
-      title: "Sustainability",
+      icon: "📈",
+      title: "Growth Marketing",
       description:
-        "We embed sustainable practices into business strategies, ensuring a balanced approach that delivers environmental responsibility, social progress, and economic growth. Specializing in water conservation, plastic waste management, and sustainable agriculture.",
+        "Data-driven growth marketing strategies that drive customer acquisition, retention, and revenue growth through integrated digital channels and performance optimization.",
     },
     {
-      icon: "💡",
-      title: "Advisory Services",
+      icon: "📝",
+      title: "Content Marketing",
       description:
-        "With deep expertise and advocacy, we simplify the challenges of doing business and empower leaders to make intelligent, forward-looking decisions that drive measurable impact and ROI.",
-    },
-    {
-      icon: "🌍",
-      title: "Market Access",
-      description:
-        "We enable organizations to seamlessly enter and expand across diverse markets, unlocking growth and creating resilient business opportunities through strategic market intelligence.",
-    },
-    {
-      icon: "⚖️",
-      title: "Governance",
-      description:
-        "Ethical, transparent, and accountable practices are at the heart of what we do, helping organizations build trust with stakeholders and society through robust governance frameworks.",
-    },
-    {
-      icon: "🛡️",
-      title: "Reputation Management",
-      description:
-        "We safeguard and enhance brand value by anticipating risks, shaping narratives, and driving strategies that strengthen credibility and stakeholder confidence.",
+        "Strategic content marketing that builds brand authority, engages target audiences, and drives conversions through compelling storytelling and value-driven content.",
     },
     {
       icon: "🎯",
-      title: "Advertising",
+      title: "Digital Marketing",
       description:
-        "Our creative and impactful campaigns ensure that your value proposition resonates authentically with audiences, leaving a lasting impression and driving business growth.",
+        "Comprehensive digital marketing solutions including SEO, SEM, social media marketing, and email marketing to maximize online presence and ROI.",
+    },
+    {
+      icon: "🌱",
+      title: "ESG Communication",
+      description:
+        "Authentic ESG and sustainability communication strategies that build trust, enhance reputation, and demonstrate genuine environmental and social impact.",
+    },
+    {
+      icon: "🗣️",
+      title: "Public Relations",
+      description:
+        "Strategic public relations and media relations that shape narratives, manage reputation, and build meaningful connections with stakeholders and audiences.",
+    },
+    {
+      icon: "🔄",
+      title: "Sustainability Marketing",
+      description:
+        "Integrated sustainability marketing that aligns brand purpose with business objectives, creating authentic connections with conscious consumers.",
     },
   ];
 
   return (
     <section className="focus-areas" id="focus">
       <div className="geometric-bg"></div>
-      <h2 className="section-title" data-aos="fade-up">
-        Our Focus Areas
+      <h2 className="focus-title" data-aos="fade-up">
+        Our Marketing & Communication Solutions
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-        Comprehensive solutions that drive sustainable growth and create lasting
-        impact
+        Integrated approaches combining growth marketing, digital strategy, and
+        sustainability communication
       </p>
       <div className="areas-grid">
         {areas.map((area, index) => (

@@ -9,57 +9,55 @@ const Footer = () => {
           <div className="footer-brand" data-aos="fade-up">
             <h3>SAMGRA LOGIC</h3>
             <p className="footer-tagline">
-              Uniting purpose with performance for sustainable business growth
+              Integrating Growth Marketing, Digital Strategy & Sustainability
+              Communication
             </p>
-            <div className="footer-social">
-              <span>Follow us:</span>
-              <div className="social-links">
-                <a href="#" aria-label="LinkedIn">
-                  LinkedIn
-                </a>
-                <a href="#" aria-label="Twitter">
-                  Twitter
-                </a>
-                <a href="#" aria-label="Instagram">
-                  Instagram
-                </a>
+            <div className="footer-services">
+              <span>Core Services:</span>
+              <div className="service-tags">
+                <span>Growth Marketing</span>
+                <span>Content Marketing</span>
+                <span>Digital Marketing</span>
+                <span>Public Relations</span>
+                <span>ESG Communication</span>
+                <span>Sustainability Marketing</span>
               </div>
             </div>
           </div>
 
           <div className="footer-links" data-aos="fade-up" data-aos-delay="100">
             <div className="footer-column">
-              <h4>Services</h4>
+              <h4>Marketing Services</h4>
               <ul>
                 <li>
-                  <a href="#">Sustainability</a>
+                  <a href="#">Growth Marketing</a>
                 </li>
                 <li>
-                  <a href="#">Advisory Services</a>
+                  <a href="#">Content Marketing</a>
                 </li>
                 <li>
-                  <a href="#">Market Access</a>
+                  <a href="#">Digital Marketing</a>
                 </li>
                 <li>
-                  <a href="#">Governance</a>
+                  <a href="#">Public Relations</a>
                 </li>
               </ul>
             </div>
 
             <div className="footer-column">
-              <h4>Company</h4>
+              <h4>Sustainability</h4>
               <ul>
                 <li>
-                  <a href="#">About Us</a>
+                  <a href="#">ESG Communication</a>
                 </li>
                 <li>
-                  <a href="#">Case Studies</a>
+                  <a href="#">Sustainability Marketing</a>
                 </li>
                 <li>
-                  <a href="#">Careers</a>
+                  <a href="#">Impact Reporting</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="#">Green Branding</a>
                 </li>
               </ul>
             </div>
@@ -68,33 +66,56 @@ const Footer = () => {
               <h4>Resources</h4>
               <ul>
                 <li>
-                  <a href="#">Blog</a>
+                  <a href="#">Marketing Insights</a>
                 </li>
                 <li>
-                  <a href="#">Insights</a>
+                  <a href="#">ESG Trends</a>
                 </li>
                 <li>
-                  <a href="#">News</a>
+                  <a href="#">Growth Strategies</a>
                 </li>
                 <li>
-                  <a href="#">Events</a>
+                  <a href="#">Case Studies</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="footer-bottom">
-          <p style={{ letterSpacing: "2px" }}>
-            Design and Developed By{" "}
+
+        {/* <div className="footer-cta" data-aos="fade-up" data-aos-delay="200">
+          <div className="cta-content">
+            <h4>Transform Your Marketing Strategy</h4>
+            <p>
+              Get expert insights on Growth Marketing, Digital Strategy, and
+              Sustainability Communication
+            </p>
             <a
-              href="https://www.syntiaro.com"
+              href="http://www.samgralogic.com"
+              className="website-link"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "black", textDecoration: "none" }}
             >
-              SYNTIARO
+              Start Your Transformation
             </a>
-          </p>
+          </div>
+        </div> */}
+
+        <div className="footer-bottom">
+          <div className="footer-bottom-content">
+            <div className="copyright">
+              <p style={{ letterSpacing: "2px" }}>
+                Design and Developed By{" "}
+                <a
+                  href="https://www.syntiaro.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "black", textDecoration: "none" }}
+                >
+                  SYNTIARO
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
