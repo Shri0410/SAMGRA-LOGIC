@@ -4,39 +4,85 @@ const FocusAreas = () => {
   const areas = [
     {
       icon: "📈",
-      title: "Growth Marketing",
+      title: "Sustainability",
       description:
-        "Data-driven growth marketing strategies that drive customer acquisition, retention, and revenue growth through integrated digital channels and performance optimization.",
+      [
+        "ESG statergy & reporting.",
+        "Water stewardship & water replenishment",
+        "Waste Management & driving circular economy",
+        "Supplier sustainability audits",
+
+      ],
     },
     {
       icon: "📝",
-      title: "Content Marketing",
+      title: "Advisory Services",
       description:
-        "Strategic content marketing that builds brand authority, engages target audiences, and drives conversions through compelling storytelling and value-driven content.",
+      [
+        "Corporate & business strategy",
+        "Sales management",
+        "Growth and turnaround advisory",
+        "Public Policy advisory",
+        "Board & leadership advisory",
+        "Regulatory strategy",
+        "Corporate Social Responsibility strategy",
+      ],
     },
     {
       icon: "🎯",
-      title: "Digital Marketing",
+      title: "Market Access",
       description:
-        "Comprehensive digital marketing solutions including SEO, SEM, social media marketing, and email marketing to maximize online presence and ROI.",
+      [
+        "Market Entry & Expansion Strategy",
+        "Regulatory & Policy Access- Factories, Environment etc.",
+        "Licensing, approvals & compliance pathways for Pharma, FMCG etc.",
+        "Channel & Partner Development",
+        "Government & Institutional Access",
+        "Pricing, Reimbursement & Commercial Access",
+        "Localisation & Market Adaptation",
+        "Pilot Launch & Scale-Up Support",
+        "Risk, Compliance & Market Readiness",
+      ],
     },
     {
       icon: "🌱",
-      title: "ESG Communication",
+      title: "Governance",
       description:
-        "Authentic ESG and sustainability communication strategies that build trust, enhance reputation, and demonstrate genuine environmental and social impact.",
+      [
+        "ESG & Sustainability Governance",
+        "CSR - execution, audit, impact, and reporting",
+      ],
     },
     {
       icon: "🗣️",
-      title: "Public Relations",
+      title: "Reputation Management",
       description:
-        "Strategic public relations and media relations that shape narratives, manage reputation, and build meaningful connections with stakeholders and audiences.",
+      [
+        "Reputation Strategy & Positioning",
+        "Media & Public Relations Advisory",
+        "Crisis & Issue Management",
+        "Digital & Online Reputation Management",
+        "Leadership & Executive Reputation",
+        "Investor & Stakeholder Communications",
+        "Policy, Regulatory & Public Affairs Reputation",
+        "Reputation Monitoring & Intelligence",
+        "Sustainability communications",    
+      ],
     },
     {
       icon: "🔄",
-      title: "Sustainability Marketing",
+      title: "Advertising",
       description:
-        "Integrated sustainability marketing that aligns brand purpose with business objectives, creating authentic connections with conscious consumers.",
+      [
+        "Advertising Strategy & Planning",
+        "Creative & Brand Communication",
+        "Digital and Traditional Advertising",
+        "Media Planning & Buying",
+        "Content & Branded Campaigns",
+        "Performance & Growth Advertising",
+        "Political, Public Affairs & Advocacy Advertising",
+        "Campaign Measurement & Optimization",
+      ],
     },
   ];
 
@@ -51,19 +97,26 @@ const FocusAreas = () => {
         sustainability communication
       </p>
       <div className="areas-grid">
-        {areas.map((area, index) => (
-          <div
-            key={index}
-            className="area-card"
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-          >
-            <div className="area-icon">{area.icon}</div>
-            <h3>{area.title}</h3>
-            <p>{area.description}</p>
-          </div>
+  {areas.map((area, index) => (
+    <div
+      key={index}
+      className="area-card"
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+    >
+      <div className="area-icon">{area.icon}</div>
+      <h3>{area.title}</h3>
+
+      {/* Bullet points */}
+      <ul className="area-points">
+        {area.description.map((point, i) => (
+          <li key={i}>{point}</li>
         ))}
-      </div>
+      </ul>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 };

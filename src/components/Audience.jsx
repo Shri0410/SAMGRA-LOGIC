@@ -3,73 +3,73 @@ import React from "react";
 const Audience = () => {
   const audiences = [
     {
-      title: "Marketing Directors & CMOs",
+      title: "C-Suite Executives & Business Leaders",
+      subtitle: "Who they are: CEOs, Managing Directors, Founders of mid-to-large enterprises",
       expectations: [
-        "Growth marketing strategies that deliver measurable ROI",
-        "Integrated digital marketing campaigns",
-        "Content marketing that drives engagement and conversions",
-        "Data-driven performance optimization",
-        "Brand storytelling and narrative development",
+        "Strategic solutions that directly align with business objectives",
+        "Clear evidence of measurable impact and ROI",
+        "Confidence in our ability to protect and strengthen their reputation",
+        "A quick, precise understanding of how we solve their challenges.",
+        "Case studies and thought leadership that demonstrate proven expertise.",
       ],
     },
     {
-      title: "Sustainability & ESG Leaders",
+      title: "Sustainability, ESG & CSR Leaders",
+      subtitle: "Who they are: Heads of Sustainability, ESG Managers, CSR Leaders",
       expectations: [
-        "ESG communication strategies that build credibility",
-        "Sustainability marketing and reporting",
-        "Stakeholder engagement through public relations",
-        "Green marketing and eco-branding",
-        "Impact measurement and communication",
+        "Deep expertise in addressing complex sustainability communication challenges",
+        "Proven experience in executing impactful environmental projects across water conservation & replenishment, plastic waste management, and sustainable agriculture",
+        "Ability to translate technical ESG data into compelling, easy-to-understand narratives",
+        "Strong knowledge of global reporting frameworks and evolving stakeholder expectations",
+        "Support in building authentic, credible, and transparent sustainability stories",
+        "Strategic guidance to avoid greenwashing while showcasing genuine impact",
       ],
     },
     {
-      title: "Digital Marketing Teams",
+      title: "Communications & Marketing Leaders",
+      subtitle: "Who they are: Chief Communications Officers, Marketing Directors, Corporate Communications Managers",
       expectations: [
-        "Growth-focused digital marketing strategies",
-        "Content marketing frameworks and execution",
-        "SEO and SEM optimization",
-        "Social media and email marketing campaigns",
-        "Marketing automation and CRM integration",
+        "A trusted strategic partner who works as an extension of their team",
+        "Integrated communication solutions across multiple channels",
+        "Crisis management expertise with rapid, reliable response capabilities",
+        "Creative campaign ideas rooted in strong strategic insights",
+        "Tools and analytics that elevate the effectiveness of communication",
       ],
     },
     {
-      title: "Public Relations Professionals",
+      title: "Governance & Compliance Officers",
+      subtitle: "Who they are: Compliance Heads, Risk Managers",
       expectations: [
-        "Integrated PR and marketing strategies",
-        "Media relations and press coverage",
-        "Crisis communication management",
-        "Stakeholder communication plans",
-        "Brand reputation management",
+        "Comprehensive reports on CSR impact, ESG performance, and market analysis",
+        "Clarity on regulatory communication requirements",
+        "Expertise in transparent and accountable messaging",
+        "Support in simplifying complex governance structures for stakeholders",
+        "Crisis preparedness and strategies to safeguard reputation",
       ],
     },
     {
-      title: "Business Growth Leaders",
+      title: "Investors & Board Members",
       expectations: [
-        "Full-funnel growth marketing solutions",
-        "Customer acquisition and retention strategies",
-        "Market expansion through digital channels",
-        "Brand positioning and competitive advantage",
-        "Revenue growth and market share expansion",
+        "Assurance that our partnership will increase shareholder value",
+        "Confidence in our ability to protect and enhance corporate reputation",
+        "Strategic insights that strengthen governance and long-term business resilience",
       ],
     },
     {
-      title: "Corporate Communications",
+      title: "Industry Influencers & Media",
       expectations: [
-        "Integrated marketing and communication strategies",
-        "ESG and sustainability storytelling",
-        "Internal and external communication alignment",
-        "Crisis communication preparedness",
-        "Stakeholder engagement programs",
+        "Thought-leadership content that sets the agenda",
+        "Expert commentary backed by credibility and insight",
+        "Media-ready perspectives that resonate with broader audiences",
       ],
     },
   ];
 
   return (
     <section className="audience" id="audience">
-      <h2 className="audi-title">Our Core Expertise Areas</h2>
+      <h2 className="audi-title">Stakeholders</h2>
       <p className="section-subtitle">
-        Specialized solutions for marketing, communication, and sustainability
-        professionals
+        At <strong>SAMGRA</strong>, we work with a diverse range of stakeholders who seek strategic clarity, measurable impact, and trusted guidance. Each audience has unique priorities — and we tailor our solutions to meet them with precision.
       </p>
       <div className="audience-grid">
         {audiences.map((audience, index) => (
@@ -80,6 +80,7 @@ const Audience = () => {
             data-aos-delay={index * 100}
           >
             <h3>{audience.title}</h3>
+            <h4>{audience.subtitle}</h4>
             <ul className="audience-list">
               {audience.expectations.map((expectation, idx) => (
                 <li key={idx}>{expectation}</li>

@@ -72,7 +72,7 @@ const Header = () => {
                 handleNavClick("focus");
               }}
             >
-              Services
+              Sustainability
             </a>
           </li>
           <li>
@@ -83,7 +83,7 @@ const Header = () => {
                 handleNavClick("audience");
               }}
             >
-              Expertise
+              Stakeholders
             </a>
           </li>
           <li>

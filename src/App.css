@@ -220,6 +220,11 @@ body {
 }
 
 .cta-button-secondary {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   color: var(--white);
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -254,7 +259,7 @@ body {
 
 .mission-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -262,12 +267,17 @@ body {
 .stat-card {
   background: var(--white);
   padding: 2.5rem 2rem;
-  border-radius: 15px;
+  border-radius: 12px;
   box-shadow: var(--shadow-soft);
   transition: all 0.3s ease;
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
+  /* background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); */
 
 .stat-card::before {
   content: "";
@@ -285,7 +295,9 @@ body {
 }
 
 .stat-number {
-  font-size: 3rem;
+  display: grid;
+  grid-template-columns: (auto 3fr);
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--primary-green);
   margin-bottom: 0.5rem;
@@ -328,7 +340,7 @@ body {
   font-size: 1.2rem;
   color: var(--text-light);
   margin-bottom: 4rem;
-  max-width: 600px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -674,7 +686,7 @@ body {
   }
 
   .stat-number {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1404,9 +1416,11 @@ section {
   .collaboration-stats {
     padding: 2rem;
   }
-
+  .stat-card{
+    grid-template-columns: 1fr;
+  }
   .stat-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .stats-grid {
@@ -1443,5 +1457,8 @@ section {
 
   .benefit-item {
     padding: 1.5rem;
+  }
+  .stat-card{
+    grid-template-columns: 1fr;
   }
 }
