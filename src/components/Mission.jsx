@@ -5,7 +5,7 @@ const Mission = () => {
     <section className="mission" id="mission">
       <div className="geometric-bg"></div>
       <div className="mission-content">
-        <h2 data-aos="fade-up">Driving Growth Through Integrated Marketing</h2>
+        <h2 data-aos="fade-up">Driving Growth with combining purpose with perfomance</h2>
         <p
           data-aos="fade-up"
           data-aos-delay="200"

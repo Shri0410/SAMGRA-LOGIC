@@ -90,12 +90,8 @@ const FocusAreas = () => {
     <section className="focus-areas" id="focus">
       <div className="geometric-bg"></div>
       <h2 className="focus-title" data-aos="fade-up">
-        Our Marketing & Communication Solutions
+        Services
       </h2>
-      <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-        Integrated approaches combining growth marketing, digital strategy, and
-        sustainability communication
-      </p>
       <div className="areas-grid">
   {areas.map((area, index) => (
     <div

@@ -219,6 +219,23 @@ body {
   box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
 }
 
+.cta-buttons-linkedin{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.cta-buttons-linkedin:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+}
 .cta-button-secondary {
   display: flex;
   gap: 1rem;
@@ -311,7 +328,6 @@ body {
 
 /* Focus Areas */
 .focus-areas {
-  padding: 50px 2rem;
   background: var(--white);
 }
 
@@ -322,10 +338,12 @@ body {
   color: var(--primary-green);
   margin-bottom: 3rem;
 }
+
 .focus-title {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 15px;
   color: var(--primary-green);
 }
 .audi-title {
@@ -803,11 +821,11 @@ section {
 }
 
 .footer-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 25rem;
+  flex-wrap: wrap;
 }
 
 .footer-brand h3 {
@@ -874,9 +892,8 @@ section {
 }
 
 .footer-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  display: flex;
+align-items: center;
 }
 
 .footer-column h4 {
@@ -899,8 +916,11 @@ section {
 }
 
 .footer-column ul {
+  display: flex;
+  gap: 2rem;
   list-style: none;
-}
+  padding: 0;
+  margin: 0;}
 
 .footer-column li {
   margin-bottom: 0.8rem;
@@ -1045,10 +1065,16 @@ section {
     padding: 3rem 1rem 1rem;
   }
 
-  .footer-main {
-    gap: 2rem;
-    margin-bottom: 0rem;
-    padding-bottom: 0rem;
+ .footer-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
   }
 
   .footer-links {
