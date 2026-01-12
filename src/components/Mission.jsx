@@ -24,11 +24,6 @@ const Mission = () => {
           holistic approach — one that unites sustainability, strategy,
           governance, and creativity to build long-term value for businesses,
           communities, and society.
-          <br></br>
-          We aspire to be more than just a service provider — we aim to be your{" "}
-          <strong>trusted partner</strong>, helping you navigate complexity,
-          unlock opportunities, and strengthen your reputation in a rapidly
-          changing world.
         </p>
 
         <div className="mission-stats">
