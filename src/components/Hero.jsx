@@ -13,13 +13,10 @@ const Hero = () => {
           Communication
         </p> */}
         <p className="hero-description" data-aos="fade-up" data-aos-delay="400">
-          We specialize in <strong>Sustainability</strong>,{" "}
-          <strong>Advisory Services</strong>,{" "}
-          <strong>Market Access</strong>,{" "}
-          <strong>Governance</strong>,{" "}
-          <strong>Reputation Management</strong> and{" "}
-          <strong>Advertising</strong> to drive measurable business impact
-          and sustainable brand growth.
+          We aspire to be more than just a service provider — we aim to be your
+          trusted partner, helping you navigate complexity, unlock
+          opportunities, and strengthen your reputation in a rapidly changing
+          world.
         </p>
         <div className="cta-buttons" data-aos="fade-up" data-aos-delay="500">
           <a href="#focus" className="cta-button">
