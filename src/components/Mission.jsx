@@ -28,7 +28,7 @@ const Mission = () => {
               communities, and society.
             </p>
           </div>
-          <div className="mission-image" data-aos="fade-left" data-aos-delay="300">
+          <div className="mission-image" data-aos="fade-up" data-aos-delay="300">
             <img src={missionSide} alt="Strategic Growth" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} />
           </div>
         </div>

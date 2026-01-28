@@ -69,13 +69,13 @@ const Audience = () => {
   return (
     <section className="audience" id="audience">
       <div className="audience-intro-grid">
-        <div className="audience-text" data-aos="fade-right">
+        <div className="audience-text" data-aos="fade-up">
           <h2 className="audi-title" style={{ marginBottom: "1.5rem", textAlign: "left" }}>Stakeholders</h2>
           <p className="section-subtitle" style={{ margin: "0", textAlign: "left", maxWidth: "100%" }}>
             At <strong>SAMGRA</strong>, we work with a diverse range of stakeholders who seek strategic clarity, measurable impact, and trusted guidance. Each audience has unique priorities — and we tailor our solutions to meet them with precision.
           </p>
         </div>
-        <div className="audience-header-img" data-aos="fade-left">
+        <div className="audience-header-img" data-aos="fade-up">
           <img src={audienceHeader} alt="Stakeholders" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} />
         </div>
       </div>
