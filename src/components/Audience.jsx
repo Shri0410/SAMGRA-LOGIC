@@ -1,5 +1,5 @@
 import React from "react";
-import audienceHeader from "../assets/audience_abstract.png";
+import audienceHeader from "../assets/audience_abstract.webp";
 
 const Audience = () => {
   const audiences = [
@@ -68,15 +68,7 @@ const Audience = () => {
 
   return (
     <section className="audience" id="audience">
-      <div className="audience-intro-grid" style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "4rem",
-        alignItems: "center",
-        maxWidth: "1200px",
-        margin: "0 auto 4rem",
-        textAlign: "left"
-      }}>
+      <div className="audience-intro-grid">
         <div className="audience-text" data-aos="fade-right">
           <h2 className="audi-title" style={{ marginBottom: "1.5rem", textAlign: "left" }}>Stakeholders</h2>
           <p className="section-subtitle" style={{ margin: "0", textAlign: "left", maxWidth: "100%" }}>

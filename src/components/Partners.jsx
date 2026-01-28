@@ -1,8 +1,8 @@
 import React from "react";
-import iconInnovation from "../assets/icon_innovation.png";
-import iconGlobal from "../assets/icon_global.png";
-import iconExpertise from "../assets/icon_expertise.png";
-import iconTrust from "../assets/icon_trust.png";
+import iconInnovation from "../assets/icon_innovation.webp";
+import iconGlobal from "../assets/icon_global.webp";
+import iconExpertise from "../assets/icon_expertise.webp";
+import iconTrust from "../assets/icon_trust.webp";
 
 const Partners = () => {
   const partners = [

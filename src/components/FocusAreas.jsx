@@ -1,10 +1,10 @@
 import React from "react";
-import iconSustainability from "../assets/icon_sustainability.png";
-import iconAdvisory from "../assets/icon_advisory.png";
-import iconMarket from "../assets/icon_market.png";
-import iconGovernance from "../assets/icon_governance.png";
-import iconReputation from "../assets/icon_reputation.png";
-import iconAdvertising from "../assets/icon_advertising.png";
+import iconSustainability from "../assets/icon_sustainability.webp";
+import iconAdvisory from "../assets/icon_advisory.webp";
+import iconMarket from "../assets/icon_market.webp";
+import iconGovernance from "../assets/icon_governance.webp";
+import iconReputation from "../assets/icon_reputation.webp";
+import iconAdvertising from "../assets/icon_advertising.webp";
 
 const FocusAreas = () => {
   const areas = [

@@ -1,5 +1,5 @@
 import React from "react";
-import ctaBg from "../assets/cta_bg.png";
+import ctaBg from "../assets/cta_bg.webp";
 
 const CtaSection = () => {
   return (

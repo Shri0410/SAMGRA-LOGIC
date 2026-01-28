@@ -1,5 +1,5 @@
 import React from "react";
-import missionSide from "../assets/mission_side.png";
+import missionSide from "../assets/mission_side.webp";
 
 const Mission = () => {
   return (
@@ -10,15 +10,7 @@ const Mission = () => {
           Driving Growth with combining purpose with perfomance
         </h2>
 
-        <div className="mission-intro-grid" style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "4rem",
-          alignItems: "center",
-          maxWidth: "1000px",
-          margin: "0 auto 4rem",
-          textAlign: "left"
-        }}>
+        <div className="mission-intro-grid">
           <div className="mission-text">
             <p
               data-aos="fade-up"
