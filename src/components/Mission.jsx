@@ -1,4 +1,5 @@
 import React from "react";
+import missionSide from "../assets/mission_side.png";
 
 const Mission = () => {
   return (
@@ -8,23 +9,37 @@ const Mission = () => {
         <h2 data-aos="fade-up">
           Driving Growth with combining purpose with perfomance
         </h2>
-        <p
-          data-aos="fade-up"
-          data-aos-delay="200"
-          style={{
-            fontSize: "1.3rem",
-            lineHeight: "1.8",
-            maxWidth: "930px",
-            margin: "0 auto 3rem",
-            color: "#666",
-          }}
-        >
-          At <strong>SAMGRA LOGIC</strong>,we believe that businesses thrive
-          when they combine purpose with performance. Our name reflects a
-          holistic approach — one that unites sustainability, strategy,
-          governance, and creativity to build long-term value for businesses,
-          communities, and society.
-        </p>
+
+        <div className="mission-intro-grid" style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "4rem",
+          alignItems: "center",
+          maxWidth: "1000px",
+          margin: "0 auto 4rem",
+          textAlign: "left"
+        }}>
+          <div className="mission-text">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="200"
+              style={{
+                fontSize: "1.2rem",
+                lineHeight: "1.8",
+                color: "#666",
+              }}
+            >
+              At <strong>SAMGRA LOGIC</strong>, we believe that businesses thrive
+              when they combine purpose with performance. Our name reflects a
+              holistic approach — one that unites sustainability, strategy,
+              governance, and creativity to build long-term value for businesses,
+              communities, and society.
+            </p>
+          </div>
+          <div className="mission-image" data-aos="fade-left" data-aos-delay="300">
+            <img src={missionSide} alt="Strategic Growth" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} />
+          </div>
+        </div>
 
         <div className="mission-stats">
           <div className="stat-card" data-aos="fade-up" data-aos-delay="300">

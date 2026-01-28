@@ -1,9 +1,10 @@
 import React from "react";
+import heroBg from "../assets/hero_bg.png";
 
 const Hero = () => {
   return (
-    <section className="hero" id="home">
-      <div className="geometric-bg"></div>
+    <section className="hero" id="home" style={{ backgroundImage: `url(${heroBg})` }}>
+      <div className="hero-overlay"></div>
       <div className="hero-content">
         <h1 data-aos="fade-up" data-aos-delay="200">
           SAMGRA LOGIC

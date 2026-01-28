@@ -5,17 +5,21 @@
 }
 
 :root {
-  --primary-green: #1a472a;
-  --secondary-green: #2d5a3d;
-  --accent-gold: #d4af37;
-  --light-bg: #f8f9fa;
+  --primary-green: #0a3d24;
+  /* Deeper, richer emerald */
+  --secondary-green: #1e5a3a;
+  --accent-gold: #cfb53b;
+  /* Classic metallic gold */
+  --light-bg: #fdfdfd;
   --white: #ffffff;
-  --text-dark: #2c5530;
-  --text-light: #666;
-  --gradient-primary: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
-  --gradient-secondary: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --text-dark: #1a2f23;
+  --text-light: #4a5d52;
+  --gradient-primary: linear-gradient(135deg, #0a3d24 0%, #145934 100%);
+  --gradient-secondary: linear-gradient(135deg, #cfb53b 0%, #f7e485 100%);
+  --shadow-soft: 0 10px 40px -10px rgba(0, 64, 32, 0.08);
+  /* Colored shadow */
+  --shadow-hover: 0 20px 50px -10px rgba(0, 64, 32, 0.15);
+  --radius-lg: 24px;
 }
 
 body {
@@ -32,20 +36,21 @@ body {
 }
 
 /* Geometric Background Patterns */
+/* Geometric Background Patterns - Now using Texture */
 .geometric-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.03;
-  background-image: radial-gradient(
-      circle at 25% 25%,
-      var(--primary-green) 2px,
-      transparent 0
-    ),
-    radial-gradient(circle at 75% 75%, var(--accent-gold) 2px, transparent 0);
-  background-size: 50px 50px;
+  opacity: 0.4;
+  /* Slightly visible texture */
+  background-image: url('./assets/bg_texture.png');
+  background-repeat: repeat;
+  background-size: 400px;
+  /* Adjust scale of texture */
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Header Styles */
@@ -124,25 +129,37 @@ body {
 
 /* Hero Section */
 .hero {
-  background: var(--gradient-primary);
-  padding: 110px 2rem 50px;
+  background-color: var(--primary-green);
+  /* background-image set inline in JSX */
+  background-size: cover;
+  background-position: center;
+  padding: 160px 2rem 100px;
   position: relative;
   overflow: hidden;
   color: var(--white);
+  min-height: 90vh;
+  /* Make it more prominent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      rgba(10, 61, 36, 0.85) 0%,
+      rgba(10, 61, 36, 0.6) 50%,
+      rgba(10, 61, 36, 0.85) 100%);
+  z-index: 1;
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 400px;
-  height: 400px;
-  background: var(--gradient-secondary);
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.1;
-  transform: translate(30%, -30%);
+  /* Removed old circle blob */
+  display: none;
 }
 
 .hero-content {
@@ -166,14 +183,16 @@ body {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.1;
-  background: linear-gradient(135deg, #ffffff 0%, #f4d03f 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #f7e485 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  letter-spacing: -2px;
 }
 
 .hero-subtitle {
@@ -219,7 +238,7 @@ body {
   box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
 }
 
-.cta-buttons-linkedin{
+.cta-buttons-linkedin {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -232,10 +251,12 @@ body {
   color: var(--white);
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
+
 .cta-buttons-linkedin:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--white);
 }
+
 .cta-button-secondary {
   display: flex;
   gap: 1rem;
@@ -276,54 +297,86 @@ body {
 
 .mission-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 cards per row */
   gap: 2rem;
   margin-top: 4rem;
 }
 
 .stat-card {
   background: var(--white);
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
-  transition: all 0.3s ease;
-  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  /* Layout change: align left */
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-  /* background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); */
 
 .stat-card::before {
+  /* Dynamic background shapes on hover */
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
   background: var(--gradient-secondary);
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: all 0.5s ease;
+}
+
+.stat-card:hover::before {
+  transform: scale(1.5);
+  opacity: 0.2;
 }
 
 .stat-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
+  border-color: var(--primary-green);
 }
 
+/* Optional: Invert colors on hover for a bold effect? 
+   Let's stick to a clean look first, but maybe highlight the number. */
+
 .stat-number {
-  display: grid;
-  grid-template-columns: (auto 3fr);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary-green);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.stat-number::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+
+.stat-card:hover .stat-number::after {
+  width: 100%;
 }
 
 .stat-label {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-light);
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 /* Focus Areas */
@@ -346,6 +399,7 @@ body {
   margin-bottom: 15px;
   color: var(--primary-green);
 }
+
 .audi-title {
   text-align: center;
   font-size: 2.5rem;
@@ -401,22 +455,29 @@ body {
 }
 
 .area-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px);
   box-shadow: var(--shadow-hover);
+  border-color: var(--accent-gold);
 }
 
 .area-icon {
-  width: 60px;
-  height: 60px;
-  background: var(--gradient-secondary);
-  border-radius: 15px;
+  width: 100%;
+  height: 120px;
+  /* Larger area for icon */
+  background: transparent;
+  border-radius: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  /* Align left */
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary-green);
+}
+
+.area-icon img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  /* Blend white background if needed, though card is white so it's fine */
 }
 
 .area-card h3 {
@@ -522,11 +583,9 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.1) 1px,
-    transparent 1px
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px);
   background-size: 50px 50px;
   animation: float 20s linear infinite;
 }
@@ -535,6 +594,7 @@ body {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   100% {
     transform: translate(-50px, -50px) rotate(360deg);
   }
@@ -682,23 +742,29 @@ body {
   .cta-section h2 {
     font-size: 2rem;
   }
+
   .hero {
     padding: 120px 2rem 15px;
   }
+
   .mission {
     padding: 10px 2rem;
   }
+
   .mission h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
     line-height: 40px;
   }
+
   .focus-areas {
     padding: 10px 2rem;
   }
+
   .audience {
     padding: 10px 2rem;
   }
+
   .cta-section {
     padding: 30px 2rem;
   }
@@ -718,6 +784,7 @@ section {
 }
 
 @media (max-width: 1024px) {
+
   /* Changed from 768px to 1024px to include tablets */
   .hamburger {
     display: flex;
@@ -728,7 +795,8 @@ section {
     top: 0;
     right: -100%;
     width: 80%;
-    max-width: 400px; /* Slightly wider for tablets */
+    max-width: 400px;
+    /* Slightly wider for tablets */
     height: 100vh;
     background: var(--white);
     flex-direction: column;
@@ -793,9 +861,11 @@ section {
   .section-title {
     font-size: 2.2rem;
   }
+
   .focus-title {
     font-size: 2.2rem;
   }
+
   .audi-title {
     font-size: 2.2rem;
   }
@@ -893,7 +963,7 @@ section {
 
 .footer-links {
   display: flex;
-align-items: center;
+  align-items: center;
 }
 
 .footer-column h4 {
@@ -920,7 +990,8 @@ align-items: center;
   gap: 2rem;
   list-style: none;
   padding: 0;
-  margin: 0;}
+  margin: 0;
+}
 
 .footer-column li {
   margin-bottom: 0.8rem;
@@ -1065,7 +1136,7 @@ align-items: center;
     padding: 3rem 1rem 1rem;
   }
 
- .footer-main {
+  .footer-main {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -1090,10 +1161,12 @@ align-items: center;
   .cta-content h4 {
     font-size: 1.5rem;
   }
+
   .focus-title {
     font-size: 2rem;
     line-height: 40px;
   }
+
   .audi-title {
     font-size: 2rem;
     line-height: 40px;
@@ -1233,7 +1306,7 @@ align-items: center;
   box-shadow: var(--shadow-hover);
 }
 
-.partner-header {
+.partner-header-row {
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -1241,59 +1314,65 @@ align-items: center;
 }
 
 .partner-logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--white);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
-.partner-header h3 {
+.partner-header-row h3 {
   color: var(--primary-green);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin: 0;
 }
+
+/* ... existing partner styles ... */
 
 .partner-description {
   color: var(--text-light);
   line-height: 1.7;
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .partner-focus h4 {
   color: var(--primary-green);
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .focus-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.6rem;
   margin-bottom: 2rem;
 }
 
 .focus-tag {
-  background: var(--light-bg);
+  background: rgba(207, 181, 59, 0.1);
+  /* Gold tint */
   color: var(--primary-green);
-  padding: 0.5rem 1.2rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
   font-weight: 600;
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(207, 181, 59, 0.3);
   transition: all 0.3s ease;
 }
 
 .focus-tag:hover {
-  background: var(--primary-green);
-  color: var(--white);
+  background: var(--accent-gold);
+  color: var(--primary-green);
   transform: translateY(-2px);
 }
 
@@ -1301,30 +1380,34 @@ align-items: center;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--accent-gold);
+  color: var(--text-dark);
+  /* Darker for better contrast on white card */
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   padding: 0.8rem 1.5rem;
-  border: 2px solid var(--accent-gold);
-  border-radius: 25px;
+  border: 2px solid var(--border-light);
+  border-radius: 50px;
 }
 
 .partner-link:hover {
-  background: var(--accent-gold);
-  color: var(--primary-green);
+  background: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 5px 15px rgba(26, 71, 42, 0.2);
 }
+
 
 /* Collaboration Stats */
 .collaboration-stats {
   text-align: center;
   margin-bottom: 5rem;
   padding: 3rem;
-  background: var(--light-bg);
-  border-radius: 20px;
+  background: linear-gradient(135deg, #fdfdfd 0%, #f4f4f4 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .collaboration-stats h3 {
@@ -1344,47 +1427,70 @@ align-items: center;
   padding: 1.5rem;
 }
 
-/* Partnership Benefits */
+/* Partnership Benefits - REDESIGNED */
 .partnership-benefits {
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .partnership-benefits h3 {
   color: var(--primary-green);
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .benefit-item {
-  padding: 2rem;
-  background: var(--white);
-  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
-  transition: all 0.3s ease;
-  border: 1px solid var(--border-light);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .benefit-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-15px);
   box-shadow: var(--shadow-hover);
+  background: var(--white);
+  border-color: var(--accent-gold);
 }
 
 .benefit-icon {
-  font-size: 3rem;
+  width: 100px;
+  height: 100px;
   margin-bottom: 1.5rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover .benefit-icon img {
+  transform: scale(1.1);
 }
 
 .benefit-item h4 {
   color: var(--primary-green);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -1392,6 +1498,7 @@ align-items: center;
 .benefit-item p {
   color: var(--text-light);
   line-height: 1.6;
+  font-size: 1.05rem;
 }
 
 /* Responsive Design for Partners Section */
@@ -1442,9 +1549,11 @@ align-items: center;
   .collaboration-stats {
     padding: 2rem;
   }
-  .stat-card{
+
+  .stat-card {
     grid-template-columns: 1fr;
   }
+
   .stat-number {
     font-size: 2rem;
   }
@@ -1484,7 +1593,8 @@ align-items: center;
   .benefit-item {
     padding: 1.5rem;
   }
-  .stat-card{
+
+  .stat-card {
     grid-template-columns: 1fr;
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import audienceHeader from "../assets/audience_abstract.png";
 
 const Audience = () => {
   const audiences = [
@@ -67,10 +68,25 @@ const Audience = () => {
 
   return (
     <section className="audience" id="audience">
-      <h2 className="audi-title">Stakeholders</h2>
-      <p className="section-subtitle">
-        At <strong>SAMGRA</strong>, we work with a diverse range of stakeholders who seek strategic clarity, measurable impact, and trusted guidance. Each audience has unique priorities — and we tailor our solutions to meet them with precision.
-      </p>
+      <div className="audience-intro-grid" style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: "4rem",
+        alignItems: "center",
+        maxWidth: "1200px",
+        margin: "0 auto 4rem",
+        textAlign: "left"
+      }}>
+        <div className="audience-text" data-aos="fade-right">
+          <h2 className="audi-title" style={{ marginBottom: "1.5rem", textAlign: "left" }}>Stakeholders</h2>
+          <p className="section-subtitle" style={{ margin: "0", textAlign: "left", maxWidth: "100%" }}>
+            At <strong>SAMGRA</strong>, we work with a diverse range of stakeholders who seek strategic clarity, measurable impact, and trusted guidance. Each audience has unique priorities — and we tailor our solutions to meet them with precision.
+          </p>
+        </div>
+        <div className="audience-header-img" data-aos="fade-left">
+          <img src={audienceHeader} alt="Stakeholders" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} />
+        </div>
+      </div>
       <div className="audience-grid">
         {audiences.map((audience, index) => (
           <div

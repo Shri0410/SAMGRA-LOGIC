@@ -1,4 +1,8 @@
 import React from "react";
+import iconInnovation from "../assets/icon_innovation.png";
+import iconGlobal from "../assets/icon_global.png";
+import iconExpertise from "../assets/icon_expertise.png";
+import iconTrust from "../assets/icon_trust.png";
 
 const Partners = () => {
   const partners = [
@@ -54,7 +58,7 @@ const Partners = () => {
               data-aos="fade-up"
               data-aos-delay={index * 200}
             >
-              <div className="partner-header">
+              <div className="partner-header-row">
                 <div
                   className="partner-logo"
                   style={{ backgroundColor: partner.color }}
@@ -99,24 +103,32 @@ const Partners = () => {
           <h3>Why We Partner</h3>
           <div className="benefits-grid">
             <div className="benefit-item">
-              <div className="benefit-icon">🚀</div>
+              <div className="benefit-icon">
+                <img src={iconInnovation} alt="Innovation" />
+              </div>
               <h4>Innovation</h4>
               <p>Combining expertise to create cutting-edge solutions</p>
             </div>
             <div className="benefit-item">
-              <div className="benefit-icon">🌍</div>
+              <div className="benefit-icon">
+                <img src={iconGlobal} alt="Global Reach" />
+              </div>
               <h4>Global Reach</h4>
               <p>Expanding impact across diverse markets and communities</p>
             </div>
             <div className="benefit-item">
-              <div className="benefit-icon">💡</div>
+              <div className="benefit-icon">
+                <img src={iconExpertise} alt="Expertise" />
+              </div>
               <h4>Expertise</h4>
               <p>
                 Leveraging specialized knowledge for comprehensive solutions
               </p>
             </div>
             <div className="benefit-item">
-              <div className="benefit-icon">🤝</div>
+              <div className="benefit-icon">
+                <img src={iconTrust} alt="Trust" />
+              </div>
               <h4>Trust</h4>
               <p>Building lasting relationships based on mutual success</p>
             </div>
