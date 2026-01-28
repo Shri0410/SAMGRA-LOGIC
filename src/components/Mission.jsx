@@ -1,5 +1,11 @@
 import React from "react";
 import missionSide from "../assets/mission_side.webp";
+import iconSustainability from "../assets/icon_sustainability.webp";
+import iconAdvisory from "../assets/icon_advisory.webp";
+import iconMarket from "../assets/icon_market.webp";
+import iconGovernance from "../assets/icon_governance.webp";
+import iconReputation from "../assets/icon_reputation.webp";
+import iconAdvertising from "../assets/icon_advertising.webp";
 
 const Mission = () => {
   return (
@@ -35,12 +41,14 @@ const Mission = () => {
 
         <div className="mission-stats">
           <div className="stat-card" data-aos="fade-up" data-aos-delay="300">
+            <img src={iconSustainability} alt="Sustainability" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Sustainability</div>
             <div className="stat-label">
               We embed sustainable practices into business strategies.
             </div>
           </div>
           <div className="stat-card" data-aos="fade-up" data-aos-delay="400">
+            <img src={iconAdvisory} alt="Advisory Services" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Advisory Services</div>
             <div className="stat-label">
               With deep expertise and advocacy, we simplify the challenges of
@@ -49,6 +57,7 @@ const Mission = () => {
             </div>
           </div>
           <div className="stat-card" data-aos="fade-up" data-aos-delay="500">
+            <img src={iconMarket} alt="Market Access" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Market Access</div>
             <div className="stat-label">
               We enable organizations to seamlessly enter and expand across
@@ -56,6 +65,7 @@ const Mission = () => {
             </div>
           </div>
           <div className="stat-card" data-aos="fade-up" data-aos-delay="600">
+            <img src={iconGovernance} alt="Governance" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Governance</div>
             <div className="stat-label">
               Ethical, transparent, and accountable practices are at the heart
@@ -63,6 +73,7 @@ const Mission = () => {
             </div>
           </div>
           <div className="stat-card" data-aos="fade-up" data-aos-delay="600">
+            <img src={iconReputation} alt="Reputation Management" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Reputation Management</div>
             <div className="stat-label">
               We safeguard and enhance brand value by anticipating risks,
@@ -71,6 +82,7 @@ const Mission = () => {
             </div>
           </div>
           <div className="stat-card" data-aos="fade-up" data-aos-delay="600">
+            <img src={iconAdvertising} alt="Advertising" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Advertising</div>
             <div className="stat-label">
               Our creative and impactful campaigns ensure that your value
