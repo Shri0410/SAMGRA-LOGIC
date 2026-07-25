@@ -14,7 +14,7 @@ const Hero = () => {
           Communication
         </p> */}
         <p className="hero-description" data-aos="fade-up" data-aos-delay="400">
-          We specialize in <strong>Sustainability</strong>,{" "}
+          At <strong>Samgra Logic</strong> (also known as Samagra), we specialize in <strong>Sustainability</strong>,{" "}
           <strong>Advisory Services </strong>,<strong>Market Access </strong>,{" "}
           <strong>Governance</strong>, <strong>Reputation Management </strong>{" "}
           and <strong>Advertising </strong>

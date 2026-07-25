@@ -8,6 +8,7 @@ import Audience from "./components/Audience";
 import Partners from "./components/Partners";
 import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <SEO />
       <Header />
       <Hero />
       <Mission />

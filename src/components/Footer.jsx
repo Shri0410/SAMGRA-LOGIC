@@ -8,6 +8,9 @@ const Footer = () => {
         <div className="footer-main">
           <div className="footer-brand" data-aos="fade-up">
             <h3>SAMGRA LOGIC</h3>
+            <p style={{ color: "var(--text-secondary, rgba(255, 255, 255, 0.7))", marginTop: "1rem", fontSize: "0.95rem", maxWidth: "300px", lineHeight: "1.5" }}>
+              Samgra (Samagra Logic) helps drive measurable business impact and sustainable brand growth.
+            </p>
             <div className="footer-services">
             </div>
           </div>
