@@ -1,0 +1,122 @@
+.ceo-section {
+  padding: 100px 2rem;
+  background: var(--light-bg);
+  position: relative;
+}
+
+.ceo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ceo-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ceo-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.ceo-subtitle {
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ceo-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .ceo-content-wrapper {
+    grid-template-columns: 4fr 6fr; /* 40/60 split */
+  }
+}
+
+.ceo-image-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.ceo-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to top, rgba(10, 61, 36, 0.95) 0%, transparent 100%);
+}
+.ceo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ceo-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  z-index: 2;
+  color: var(--white);
+}
+
+.ceo-image-caption h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.ceo-image-caption p {
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ceo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ceo-text-lead {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  line-height: 1.6;
+  border-left: 4px solid var(--accent-gold);
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ceo-text p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.ceo-text .ceo-highlight {
+  background: rgba(207, 181, 59, 0.08);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-gold);
+  font-style: italic;
+  margin-top: 1rem;
+  color: var(--primary-green);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
