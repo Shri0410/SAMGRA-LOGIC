@@ -4,6 +4,28 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f6f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0a3d24;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #145934;
+}
+
 :root {
   --primary-green: #0a3d24;
   /* Deeper, richer emerald */
@@ -721,6 +743,10 @@ body {
     font-size: 1.2rem;
   }
 
+  .hero-description {
+    text-align: justify;
+  }
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
@@ -1320,10 +1346,20 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
   color: var(--white);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.partner-logo svg {
+  display: block;
+  stroke: #ffffff;
 }
 
 .partner-header-row h3 {
@@ -1380,15 +1416,16 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text-dark);
-  /* Darker for better contrast on white card */
+  color: var(--primary-green);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
-  padding: 0.8rem 1.5rem;
-  border: 2px solid var(--border-light);
+  padding: 0.7rem 1.5rem;
+  border: 1.5px solid var(--primary-green);
   border-radius: 50px;
+  background: transparent;
+  width: fit-content;
 }
 
 .partner-link:hover {
@@ -1396,7 +1433,16 @@ section {
   color: var(--white);
   border-color: var(--primary-green);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(26, 71, 42, 0.2);
+  box-shadow: 0 6px 18px rgba(10, 61, 36, 0.2);
+}
+
+.partner-link span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.partner-link:hover span {
+  transform: translateX(4px);
 }
 
 
@@ -1547,7 +1593,7 @@ section {
 
   .mission-text p,
   .audience-text p {
-    text-align: center !important;
+    text-align: justify;
     /* Force center align on mobile */
   }
 

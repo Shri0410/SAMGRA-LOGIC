@@ -95,7 +95,7 @@ const FocusAreas = () => {
   return (
     <section className="focus-areas" id="focus">
       <div className="geometric-bg"></div>
-      <h2 className="focus-title" data-aos="fade-up">
+      <h2 className="focus-title">
         Services
       </h2>
       <div className="areas-grid">
@@ -103,8 +103,6 @@ const FocusAreas = () => {
           <div
             key={index}
             className="area-card"
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
           >
             <div className="area-icon">
               <img src={area.icon} alt={area.title} />

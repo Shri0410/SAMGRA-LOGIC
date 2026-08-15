@@ -12,19 +12,18 @@ const Mission = () => {
     <section className="mission" id="mission">
       <div className="geometric-bg"></div>
       <div className="mission-content">
-        <h2 data-aos="fade-up">
+        <h2>
           Driving Growth with combining purpose with perfomance
         </h2>
 
         <div className="mission-intro-grid">
           <div className="mission-text">
             <p
-              data-aos="fade-up"
-              data-aos-delay="200"
               style={{
                 fontSize: "1.2rem",
                 lineHeight: "1.8",
                 color: "#666",
+
               }}
             >
               At <strong>SAMGRA LOGIC</strong>, we believe that businesses thrive
@@ -34,20 +33,20 @@ const Mission = () => {
               communities, and society.
             </p>
           </div>
-          <div className="mission-image" data-aos="fade-up" data-aos-delay="300">
+          <div className="mission-image">
             <img src={missionSide} alt="Strategic Growth" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} />
           </div>
         </div>
 
         <div className="mission-stats">
-          <div className="stat-card" data-aos="fade-up" data-aos-delay="300">
+          <div className="stat-card">
             <img src={iconSustainability} alt="Sustainability" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Sustainability</div>
             <div className="stat-label">
               We embed sustainable practices into business strategies.
             </div>
           </div>
-          <div className="stat-card" data-aos="fade-up" data-aos-delay="400">
+          <div className="stat-card">
             <img src={iconAdvisory} alt="Advisory Services" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Advisory Services</div>
             <div className="stat-label">
@@ -56,7 +55,7 @@ const Mission = () => {
               forward-looking decisions.
             </div>
           </div>
-          <div className="stat-card" data-aos="fade-up" data-aos-delay="500">
+          <div className="stat-card">
             <img src={iconMarket} alt="Market Access" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Market Access</div>
             <div className="stat-label">
@@ -64,7 +63,7 @@ const Mission = () => {
               diverse markets.
             </div>
           </div>
-          <div className="stat-card" data-aos="fade-up" data-aos-delay="600">
+          <div className="stat-card">
             <img src={iconGovernance} alt="Governance" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Governance</div>
             <div className="stat-label">
@@ -72,7 +71,7 @@ const Mission = () => {
               of what we do.
             </div>
           </div>
-          <div className="stat-card" data-aos="fade-up" data-aos-delay="600">
+          <div className="stat-card">
             <img src={iconReputation} alt="Reputation Management" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Reputation Management</div>
             <div className="stat-label">
@@ -81,7 +80,7 @@ const Mission = () => {
               credibility.
             </div>
           </div>
-          <div className="stat-card" data-aos="fade-up" data-aos-delay="600">
+          <div className="stat-card">
             <img src={iconAdvertising} alt="Advertising" style={{ width: "60px", marginBottom: "1rem" }} />
             <div className="stat-number">Advertising</div>
             <div className="stat-label">
