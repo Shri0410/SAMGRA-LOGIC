@@ -99,10 +99,32 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#cta-section"
+              href="#team"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick("cta-section");
+                handleNavClick("team");
+              }}
+            >
+              Team
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("contact");
+              }}
+            >
+              Enquiry
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("contact");
               }}
             >
               Get Started

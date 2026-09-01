@@ -23,7 +23,6 @@ const Mission = () => {
                 fontSize: "1.2rem",
                 lineHeight: "1.8",
                 color: "#666",
-
               }}
             >
               At <strong>SAMGRA LOGIC</strong>, we believe that businesses thrive

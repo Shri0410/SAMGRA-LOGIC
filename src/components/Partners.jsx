@@ -11,10 +11,6 @@ import {
   Ticket,
   Tv,
 } from "lucide-react";
-import iconInnovation from "../assets/icon_innovation.webp";
-import iconGlobal from "../assets/icon_global.webp";
-import iconExpertise from "../assets/icon_expertise.webp";
-import iconTrust from "../assets/icon_trust.webp";
 
 const Partners = () => {
   const partners = [
@@ -217,43 +213,6 @@ const Partners = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* Partnership Benefits */}
-        <div className="partnership-benefits">
-          <h3>Why We Partner</h3>
-          <div className="benefits-grid">
-            <div className="benefit-item">
-              <div className="benefit-icon">
-                <img src={iconInnovation} alt="Innovation" />
-              </div>
-              <h4>Innovation</h4>
-              <p>Combining expertise to create cutting-edge solutions</p>
-            </div>
-            <div className="benefit-item">
-              <div className="benefit-icon">
-                <img src={iconGlobal} alt="Global Reach" />
-              </div>
-              <h4>Global Reach</h4>
-              <p>Expanding impact across diverse markets and communities</p>
-            </div>
-            <div className="benefit-item">
-              <div className="benefit-icon">
-                <img src={iconExpertise} alt="Expertise" />
-              </div>
-              <h4>Expertise</h4>
-              <p>
-                Leveraging specialized knowledge for comprehensive solutions
-              </p>
-            </div>
-            <div className="benefit-item">
-              <div className="benefit-icon">
-                <img src={iconTrust} alt="Trust" />
-              </div>
-              <h4>Trust</h4>
-              <p>Building lasting relationships based on mutual success</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

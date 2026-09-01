@@ -1625,7 +1625,7 @@ section {
 
 @media (max-width: 768px) {
   .partners {
-    padding: 60px 1rem;
+    padding: 10px 1rem;
   }
 
   .partner-card {
@@ -1699,4 +1699,644 @@ section {
   .stat-card {
     grid-template-columns: 1fr;
   }
+}
+
+/* ========================================================
+   Contact & Enquiry Form Section
+   ======================================================== */
+.contact-section {
+  padding: 80px 2rem 100px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 61, 36, 0.08);
+  color: var(--primary-green);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(10, 61, 36, 0.15);
+}
+
+.contact-badge-icon {
+  color: var(--accent-gold);
+}
+
+.contact-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Centered Enquiry Form Card - Transparent */
+.contact-form-centered {
+  max-width: 780px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+}
+
+.form-card-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-card-header h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 0.35rem;
+}
+
+.form-card-header p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+}
+
+.req-star {
+  color: #d9383a;
+  font-weight: 700;
+}
+
+/* Form Alerts */
+.form-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-alert-success {
+  background-color: #eaf8ef;
+  border: 1px solid #94d9a8;
+  color: #0d5f2a;
+}
+
+.form-alert-success .alert-icon {
+  color: #12823b;
+  flex-shrink: 0;
+}
+
+.form-alert-error {
+  background-color: #fdf2f2;
+  border: 1px solid #f6baba;
+  color: #991b1b;
+}
+
+.form-alert-error .alert-icon {
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.alert-content strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.alert-content p {
+  font-size: 0.88rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.alert-direct-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #991b1b;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Enquiry Form */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.input-with-icon,
+.textarea-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-icon {
+  position: absolute;
+  left: 14px;
+  color: #8fa096;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.textarea-icon {
+  top: 14px;
+  align-self: flex-start;
+}
+
+.input-with-icon input,
+.select-wrapper select,
+.textarea-with-icon textarea {
+  width: 100%;
+  padding: 13px 16px 13px 44px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  border: 1.5px solid #dce4df;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.input-with-icon input::placeholder,
+.textarea-with-icon textarea::placeholder {
+  color: #94a399;
+  font-weight: 400;
+  font-size: 0.92rem;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  padding-left: 16px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230a3d24' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+
+.textarea-with-icon textarea {
+  resize: vertical;
+  min-height: 115px;
+}
+
+.input-with-icon input:focus,
+.select-wrapper select:focus,
+.textarea-with-icon textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3.5px rgba(10, 61, 36, 0.12);
+}
+
+.input-with-icon input:focus+.field-icon,
+.textarea-with-icon textarea:focus+.field-icon {
+  color: var(--primary-green);
+}
+
+/* Submit Button Container & Reduced Width */
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.submit-enquiry-btn {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 13px 38px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(10, 61, 36, 0.2);
+  width: auto;
+  min-width: 190px;
+}
+
+.submit-enquiry-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(10, 61, 36, 0.28);
+}
+
+.submit-enquiry-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================================
+   Success Popup Modal Styles
+   ======================================================== */
+.popup-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 61, 36, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-modal-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.75rem 2.25rem;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid rgba(207, 181, 59, 0.3);
+  animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.popup-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f0f4f2;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #557262;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.popup-modal-close:hover {
+  background: #e1ede6;
+  color: var(--primary-green);
+  transform: rotate(90deg);
+}
+
+.popup-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #eaf8ef 0%, #d4eedb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 25px rgba(18, 130, 59, 0.18);
+  border: 2px solid #b2e4c0;
+}
+
+.popup-check-icon {
+  color: #12823b;
+}
+
+.popup-modal-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 0.75rem;
+}
+
+.popup-modal-desc {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.popup-modal-btn {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  padding: 13px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(10, 61, 36, 0.22);
+  width: 100%;
+}
+
+.popup-modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(10, 61, 36, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 1.25rem 80px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+/* ========================================================
+   About Section (Leadership & CEO)
+   ======================================================== */
+/* ========================================================
+   Team Section (Meet Our Leadership)
+   ======================================================== */
+.about-section {
+  padding: 40px 2rem 100px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.team-main-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 0.3rem;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.team-sub-badge {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.4fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Left: Image Column */
+.about-image-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(10, 61, 36, 0.12);
+  border: 1.5px solid rgba(207, 181, 59, 0.25);
+  background: #ffffff;
+}
+
+.ceo-photo {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.ceo-badge-floating {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 61, 36, 0.95) 40%, rgba(10, 61, 36, 1) 100%);
+  padding: 2.5rem 1.5rem 1.25rem;
+  color: var(--white);
+}
+
+.ceo-badge-tag {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ceo-badge-org {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-top: 3px;
+}
+
+/* Right: Bio Column */
+.about-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.leader-top-box {
+  border-left: 3.5px solid var(--accent-gold);
+  padding: 0.6rem 0 0.6rem 1.4rem;
+  margin-bottom: 1.75rem;
+}
+
+.leader-top-box .about-quote-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  line-height: 1.6;
+  font-style: normal;
+  margin: 0;
+}
+
+.about-bio-text p {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #334b3d;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+.about-bio-text p:last-child {
+  margin-bottom: 0;
+}
+
+.leader-bottom-box {
+  background: #faf8f0;
+  border-left: 3.5px solid var(--accent-gold);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.leader-bottom-box p {
+  font-size: 0.95rem;
+  color: #2b4535;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive adjustments for Team */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ceo-photo {
+    height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 20px 1.25rem 60px;
+  }
+
+  .team-main-title {
+    font-size: 2.4rem;
+  }
+
+  .ceo-photo {
+    height: 350px;
+  }
+}
+
+/* SYNTIARO Link Styling & Hover */
+.syntiaro-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.syntiaro-link:hover {
+  color: rgb(0, 184, 217) !important;
+  font-weight: 450;
 }

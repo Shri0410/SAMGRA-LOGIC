@@ -6,6 +6,9 @@ import Mission from "./components/Mission";
 import FocusAreas from "./components/FocusAreas";
 import Audience from "./components/Audience";
 import Partners from "./components/Partners";
+import About from "./components/About";
+import WhyWePartner from "./components/WhyWePartner";
+import Contact from "./components/Contact";
 import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
 import SEO from "./components/SEO";
@@ -21,6 +24,9 @@ function App() {
       <FocusAreas />
       <Audience />
       <Partners />
+      <About />
+      <WhyWePartner />
+      <Contact />
       <CtaSection />
       <Footer />
     </div>

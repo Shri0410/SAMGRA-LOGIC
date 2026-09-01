@@ -44,7 +44,7 @@ const Footer = () => {
                   href="https://www.syntiaro.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "black", textDecoration: "none" }}
+                  className="syntiaro-link"
                 >
                   SYNTIARO
                 </a>
