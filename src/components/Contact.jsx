@@ -77,9 +77,12 @@ const Contact = () => {
     });
 
     try {
-      const apiUrl = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-        ? "http://localhost:5001/api/contact"
-        : "/api/contact";
+      const baseUrl = import.meta.env.VITE_API_URL
+        ? import.meta.env.VITE_API_URL.replace(/\/$/, "")
+        : (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
+          ? "http://localhost:5001"
+          : "";
+      const apiUrl = `${baseUrl}/api/contact`;
 
       const response = await fetch(apiUrl, {
         method: "POST",

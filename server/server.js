@@ -3,6 +3,7 @@ import cors from "cors";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import path from "path";
+import fs from "fs";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -204,6 +205,21 @@ Delivered to: ${targetRecipient}
     });
   }
 });
+
+// Serve static frontend in production if dist folder exists
+const distPath = path.join(__dirname, "../dist");
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+
+  app.get("*", (req, res, next) => {
+    if (req.path.startsWith("/api/")) return next();
+    const indexPath = path.join(distPath, "index.html");
+    if (fs.existsSync(indexPath)) {
+      return res.sendFile(indexPath);
+    }
+    return next();
+  });
+}
 
 // Start Server
 app.listen(PORT, () => {
