@@ -9,7 +9,7 @@ import iconAdvertising from "../assets/icon_advertising.webp";
 
 const Mission = () => {
   return (
-    <section className="mission" id="mission">
+    <section className="mission" id="mission" aria-label="Our Mission">
       <div className="geometric-bg"></div>
       <div className="mission-content">
         <h2>
@@ -33,61 +33,61 @@ const Mission = () => {
             </p>
           </div>
           <div className="mission-image">
-            <img src={missionSide} alt="Strategic Growth" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} />
+            <img src={missionSide} alt="Strategic Growth illustration" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} loading="lazy" />
           </div>
         </div>
 
         <div className="mission-stats">
-          <div className="stat-card">
-            <img src={iconSustainability} alt="Sustainability" style={{ width: "60px", marginBottom: "1rem" }} />
-            <div className="stat-number">Sustainability</div>
-            <div className="stat-label">
+          <article className="stat-card">
+            <img src={iconSustainability} alt="Sustainability Icon" style={{ width: "60px", marginBottom: "1rem" }} loading="lazy" />
+            <h3 className="stat-number">Sustainability</h3>
+            <p className="stat-label">
               We embed sustainable practices into business strategies.
-            </div>
-          </div>
-          <div className="stat-card">
-            <img src={iconAdvisory} alt="Advisory Services" style={{ width: "60px", marginBottom: "1rem" }} />
-            <div className="stat-number">Advisory Services</div>
-            <div className="stat-label">
+            </p>
+          </article>
+          <article className="stat-card">
+            <img src={iconAdvisory} alt="Advisory Services Icon" style={{ width: "60px", marginBottom: "1rem" }} loading="lazy" />
+            <h3 className="stat-number">Advisory Services</h3>
+            <p className="stat-label">
               With deep expertise and advocacy, we simplify the challenges of
               doing business and empower leaders to make intelligent,
               forward-looking decisions.
-            </div>
-          </div>
-          <div className="stat-card">
-            <img src={iconMarket} alt="Market Access" style={{ width: "60px", marginBottom: "1rem" }} />
-            <div className="stat-number">Market Access</div>
-            <div className="stat-label">
+            </p>
+          </article>
+          <article className="stat-card">
+            <img src={iconMarket} alt="Market Access Icon" style={{ width: "60px", marginBottom: "1rem" }} loading="lazy" />
+            <h3 className="stat-number">Market Access</h3>
+            <p className="stat-label">
               We enable organizations to seamlessly enter and expand across
               diverse markets.
-            </div>
-          </div>
-          <div className="stat-card">
-            <img src={iconGovernance} alt="Governance" style={{ width: "60px", marginBottom: "1rem" }} />
-            <div className="stat-number">Governance</div>
-            <div className="stat-label">
+            </p>
+          </article>
+          <article className="stat-card">
+            <img src={iconGovernance} alt="Governance Icon" style={{ width: "60px", marginBottom: "1rem" }} loading="lazy" />
+            <h3 className="stat-number">Governance</h3>
+            <p className="stat-label">
               Ethical, transparent, and accountable practices are at the heart
               of what we do.
-            </div>
-          </div>
-          <div className="stat-card">
-            <img src={iconReputation} alt="Reputation Management" style={{ width: "60px", marginBottom: "1rem" }} />
-            <div className="stat-number">Reputation Management</div>
-            <div className="stat-label">
+            </p>
+          </article>
+          <article className="stat-card">
+            <img src={iconReputation} alt="Reputation Management Icon" style={{ width: "60px", marginBottom: "1rem" }} loading="lazy" />
+            <h3 className="stat-number">Reputation Management</h3>
+            <p className="stat-label">
               We safeguard and enhance brand value by anticipating risks,
               shaping narratives, and driving strategies that strengthen
               credibility.
-            </div>
-          </div>
-          <div className="stat-card">
-            <img src={iconAdvertising} alt="Advertising" style={{ width: "60px", marginBottom: "1rem" }} />
-            <div className="stat-number">Advertising</div>
-            <div className="stat-label">
+            </p>
+          </article>
+          <article className="stat-card">
+            <img src={iconAdvertising} alt="Advertising Icon" style={{ width: "60px", marginBottom: "1rem" }} loading="lazy" />
+            <h3 className="stat-number">Advertising</h3>
+            <p className="stat-label">
               Our creative and impactful campaigns ensure that your value
               proposition resonates authentically with audiences, leaving a
               lasting impression.
-            </div>
-          </div>
+            </p>
+          </article>
         </div>
       </div>
     </section>

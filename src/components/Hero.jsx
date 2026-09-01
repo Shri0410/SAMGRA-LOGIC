@@ -3,7 +3,7 @@ import heroBg from "../assets/hero_bg.webp";
 
 const Hero = () => {
   return (
-    <section className="hero" id="home" style={{ backgroundImage: `url(${heroBg})` }}>
+    <section className="hero" id="home" style={{ backgroundImage: `url(${heroBg})` }} aria-label="Hero Section">
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <h1>
@@ -21,7 +21,7 @@ const Hero = () => {
           to drive measurable business impact and sustainable brand growth.
         </p>
         <div className="cta-buttons">
-          <a href="#focus" className="cta-button">
+          <a href="#focus" className="cta-button" aria-label="Explore Our Services">
             Explore Our Services
           </a>
         </div>

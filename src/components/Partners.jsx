@@ -157,7 +157,7 @@ const Partners = () => {
   ];
 
   return (
-    <section className="partners" id="partners">
+    <section className="partners" id="partners" aria-label="Strategic Partners">
       <div className="geometric-bg"></div>
       <div className="partners-content">
         {/* Section Header */}
@@ -174,7 +174,7 @@ const Partners = () => {
           {partners.map((partner, index) => {
             const PartnerIcon = partner.icon;
             return (
-              <div
+              <article
                 key={index}
                 className="partner-card"
               >
@@ -183,7 +183,7 @@ const Partners = () => {
                     className="partner-logo"
                     style={{ backgroundColor: partner.color }}
                   >
-                    <PartnerIcon size={32} color="#ffffff" strokeWidth={2.2} />
+                    <PartnerIcon size={32} color="#ffffff" strokeWidth={2.2} aria-hidden="true" />
                   </div>
                   <h3>{partner.name}</h3>
                 </div>
@@ -207,10 +207,11 @@ const Partners = () => {
                   className="partner-link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Learn more about ${partner.name}`}
                 >
                   Learn More
                 </a>
-              </div>
+              </article>
             );
           })}
         </div>

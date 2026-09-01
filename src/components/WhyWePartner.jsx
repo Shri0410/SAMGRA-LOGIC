@@ -29,7 +29,7 @@ const WhyWePartner = () => {
   ];
 
   return (
-    <section className="partners why-we-partner-section" id="why-we-partner">
+    <section className="partners why-we-partner-section" id="why-we-partner" aria-label="Why We Partner">
       <div className="geometric-bg"></div>
       <div className="partners-content">
         {/* Partnership Benefits */}
@@ -40,13 +40,13 @@ const WhyWePartner = () => {
           </p>
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
-              <div key={index} className="benefit-item">
+              <article key={index} className="benefit-item">
                 <div className="benefit-icon">
-                  <img src={benefit.icon} alt={benefit.title} />
+                  <img src={benefit.icon} alt={`${benefit.title} Icon`} loading="lazy" aria-hidden="true" />
                 </div>
                 <h4>{benefit.title}</h4>
                 <p>{benefit.description}</p>
-              </div>
+              </article>
             ))}
           </div>
         </div>

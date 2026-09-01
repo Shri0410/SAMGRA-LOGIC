@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="nav">
+      <nav className="nav" aria-label="Main Navigation">
         <div className="logo">SAMGRA LOGIC</div>
 
         {/* Hamburger Menu Button */}

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer" aria-label="Site Footer">
       <div className="geometric-bg"></div>
       <div className="footer-content">
         <div className="footer-main">
@@ -45,6 +45,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="syntiaro-link"
+                  aria-label="Visit Syntiaro Website"
                 >
                   SYNTIARO
                 </a>

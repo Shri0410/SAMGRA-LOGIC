@@ -93,19 +93,19 @@ const FocusAreas = () => {
   ];
 
   return (
-    <section className="focus-areas" id="focus">
+    <section className="focus-areas" id="focus" aria-label="Our Services">
       <div className="geometric-bg"></div>
       <h2 className="focus-title">
         Services
       </h2>
       <div className="areas-grid">
         {areas.map((area, index) => (
-          <div
+          <article
             key={index}
             className="area-card"
           >
             <div className="area-icon">
-              <img src={area.icon} alt={area.title} />
+              <img src={area.icon} alt={`${area.title} Icon`} loading="lazy" aria-hidden="true" />
             </div>
             <h3>{area.title}</h3>
 
@@ -115,7 +115,7 @@ const FocusAreas = () => {
                 <li key={i}>{point}</li>
               ))}
             </ul>
-          </div>
+          </article>
         ))}
       </div>
 

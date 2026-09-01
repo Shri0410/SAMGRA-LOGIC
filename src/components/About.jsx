@@ -3,7 +3,7 @@ import leaderImage from "../assets/jappreet.png";
 
 const About = () => {
   return (
-    <section className="about-section" id="team">
+    <section className="about-section" id="team" aria-label="Team">
       <div className="about-container">
         {/* Section Header */}
         <div className="about-header" data-aos="fade-up">
@@ -20,6 +20,7 @@ const About = () => {
                 src={leaderImage}
                 alt="Jappreet Sethi - Founder and CEO, HexGn"
                 className="ceo-photo"
+                loading="lazy"
               />
               <div className="ceo-badge-floating">
                 <div className="ceo-badge-tag">Jappreet Sethi</div>

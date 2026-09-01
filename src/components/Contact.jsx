@@ -134,7 +134,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-section" id="contact">
+    <section className="contact-section" id="contact" aria-label="Contact Us">
       <div className="contact-container">
         {/* Section Header */}
         <div className="contact-header" data-aos="fade-up">
@@ -173,7 +173,7 @@ const Contact = () => {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="enquiry-form">
+            <form onSubmit={handleSubmit} className="enquiry-form" aria-label="Enquiry Form">
               <div className="form-row">
                 {/* Full Name Field */}
                 <div className="form-group">

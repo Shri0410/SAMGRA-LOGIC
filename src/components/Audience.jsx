@@ -67,7 +67,7 @@ const Audience = () => {
   ];
 
   return (
-    <section className="audience" id="audience">
+    <section className="audience" id="audience" aria-label="Stakeholders">
       <div className="audience-intro-grid">
         <div className="audience-text">
           <h2 className="audi-title" style={{ marginBottom: "1.5rem", textAlign: "left" }}>Stakeholders</h2>
@@ -76,23 +76,23 @@ const Audience = () => {
           </p>
         </div>
         <div className="audience-header-img">
-          <img src={audienceHeader} alt="Stakeholders" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} />
+          <img src={audienceHeader} alt="A diverse group of business stakeholders" style={{ width: "100%", borderRadius: "20px", boxShadow: "var(--shadow-soft)" }} loading="lazy" />
         </div>
       </div>
       <div className="audience-grid">
         {audiences.map((audience, index) => (
-          <div
+          <article
             key={index}
             className="audience-card"
           >
             <h3>{audience.title}</h3>
-            <h4>{audience.subtitle}</h4>
+            {audience.subtitle && <h4>{audience.subtitle}</h4>}
             <ul className="audience-list">
               {audience.expectations.map((expectation, idx) => (
                 <li key={idx}>{expectation}</li>
               ))}
             </ul>
-          </div>
+          </article>
         ))}
       </div>
     </section>
