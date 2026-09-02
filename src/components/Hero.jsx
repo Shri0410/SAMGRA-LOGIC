@@ -3,25 +3,34 @@ import heroBg from "../assets/hero_bg.webp";
 
 const Hero = () => {
   return (
-    <section className="hero" id="home" style={{ backgroundImage: `url(${heroBg})` }} aria-label="Hero Section">
+    <section
+      className="hero"
+      id="home"
+      style={{ backgroundImage: `url(${heroBg})` }}
+      aria-label="SAMGRA LOGIC Hero Section"
+    >
       <div className="hero-overlay"></div>
+
       <div className="hero-content">
-        <h1>
-          SAMGRA LOGIC
-        </h1>
-        {/* <p className="hero-subtitle">
-          Integrating Growth Marketing, Digital Strategy & Sustainability
-          Communication
-        </p> */}
+        <h1>SAMGRA LOGIC</h1>
+
         <p className="hero-description">
-          At <strong>Samgra Logic</strong> (also known as Samagra), we specialize in <strong>Sustainability</strong>,{" "}
-          <strong>Advisory Services </strong>,<strong>Market Access </strong>,{" "}
-          <strong>Governance</strong>, <strong>Reputation Management </strong>{" "}
-          and <strong>Advertising </strong>
-          to drive measurable business impact and sustainable brand growth.
+          At <strong>SAMGRA LOGIC</strong>, we specialize in{" "}
+          <strong>Sustainability</strong>,{" "}
+          <strong>Advisory Services</strong>,{" "}
+          <strong>Market Access</strong>,{" "}
+          <strong>Governance</strong>,{" "}
+          <strong>Reputation Management</strong> and{" "}
+          <strong>Advertising</strong> to drive measurable business impact
+          and sustainable brand growth.
         </p>
+
         <div className="cta-buttons">
-          <a href="#focus" className="cta-button" aria-label="Explore Our Services">
+          <a
+            href="#focus"
+            className="cta-button"
+            aria-label="Explore Our Services"
+          >
             Explore Our Services
           </a>
         </div>
