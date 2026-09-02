@@ -7,6 +7,7 @@ const Footer = () => {
 
       <div className="footer-content">
         <div className="footer-main">
+          {/* Brand Section */}
           <div className="footer-brand">
             <h3>SAMGRA LOGIC</h3>
 
@@ -19,13 +20,14 @@ const Footer = () => {
                 lineHeight: "1.5",
               }}
             >
-              SAMGRA LOGIC helps drive measurable business impact and
+              Samgra (Samagra Logic) helps drive measurable business impact and
               sustainable brand growth.
             </p>
 
             <div className="footer-services"></div>
           </div>
 
+          {/* Resources Section */}
           <div className="footer-links">
             <div className="footer-column">
               <h4>Resources</h4>
@@ -51,6 +53,7 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <div className="copyright">

@@ -7,22 +7,31 @@ const Hero = () => {
       className="hero"
       id="home"
       style={{ backgroundImage: `url(${heroBg})` }}
-      aria-label="SAMGRA LOGIC Hero Section"
+      aria-label="Hero Section"
     >
       <div className="hero-overlay"></div>
 
       <div className="hero-content">
         <h1>SAMGRA LOGIC</h1>
 
+        {/* Hero Subtitle */}
+        {/*
+        <p className="hero-subtitle">
+          Integrating Growth Marketing, Digital Strategy & Sustainability
+          Communication
+        </p>
+        */}
+
         <p className="hero-description">
-          At <strong>SAMGRA LOGIC</strong>, we specialize in{" "}
+          At <strong>Samgra Logic</strong> (also known as Samagra), we
+          specialize in{" "}
           <strong>Sustainability</strong>,{" "}
           <strong>Advisory Services</strong>,{" "}
           <strong>Market Access</strong>,{" "}
           <strong>Governance</strong>,{" "}
-          <strong>Reputation Management</strong> and{" "}
-          <strong>Advertising</strong> to drive measurable business impact
-          and sustainable brand growth.
+          <strong>Reputation Management</strong>, and{" "}
+          <strong>Advertising</strong> to drive measurable business impact and
+          sustainable brand growth.
         </p>
 
         <div className="cta-buttons">
