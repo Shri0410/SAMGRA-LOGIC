@@ -211,11 +211,12 @@ const distPath = path.join(__dirname, "../dist");
 if (fs.existsSync(distPath)) {
   app.use(express.static(distPath));
 
-  app.get("*", (req, res, next) => {
-    if (req.path.startsWith("/api/")) return next();
-    const indexPath = path.join(distPath, "index.html");
-    if (fs.existsSync(indexPath)) {
-      return res.sendFile(indexPath);
+  app.use((req, res, next) => {
+    if (req.method === "GET" && !req.path.startsWith("/api/")) {
+      const indexPath = path.join(distPath, "index.html");
+      if (fs.existsSync(indexPath)) {
+        return res.sendFile(indexPath);
+      }
     }
     return next();
   });

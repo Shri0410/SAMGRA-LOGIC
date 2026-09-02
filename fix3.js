@@ -1,0 +1,1 @@
+const fs = require("fs"); let c = fs.readFileSync("/home/samgra/htdocs/samgralogic.com/server/server.js", "utf8"); c = c.replace(/app\.get\("\/\(\.\*\)",/g, "app.use("); fs.writeFileSync("/home/samgra/htdocs/samgralogic.com/server/server.js", c);
