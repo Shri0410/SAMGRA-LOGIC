@@ -66,6 +66,17 @@ const Header = () => {
           </li>
           <li>
             <a
+              href="#advisors"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("advisors");
+              }}
+            >
+              Advisors
+            </a>
+          </li>
+          <li>
+            <a
               href="#mission"
               onClick={(e) => {
                 e.preventDefault();

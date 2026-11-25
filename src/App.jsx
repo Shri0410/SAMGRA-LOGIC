@@ -10,6 +10,7 @@ import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
 import SEO from "./components/SEO";
 import CEO from "./components/CEO";
+import BoardOfAdvisors from "./components/BoardOfAdvisors";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -33,6 +34,7 @@ function App() {
       <FocusAreas />
       <Audience />
       <CEO />
+      <BoardOfAdvisors />
       <Partners />
       <CtaSection />
       <Footer />

@@ -1,0 +1,227 @@
+/* =====================
+   Board of Advisors Section
+   ===================== */
+
+.boa-section {
+  padding: 100px 2rem;
+  background: #fff;
+  position: relative;
+}
+
+.boa-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.boa-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.boa-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.boa-subtitle {
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Grid: 2 columns on desktop, 1 on mobile */
+.boa-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 992px) {
+  .boa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================
+   Individual Advisor Card
+   ===================== */
+
+.advisor-card {
+  background: var(--light-bg, #f8f9f5);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  border: 1px solid rgba(10, 61, 36, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.advisor-card:hover {
+  box-shadow: 0 12px 40px rgba(10, 61, 36, 0.12);
+  transform: translateY(-4px);
+}
+
+/* Avatar row */
+.advisor-avatar-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.advisor-avatar {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-green, #0a3d24), #1a6e44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(10, 61, 36, 0.25);
+}
+
+/* Photo variant — same size/shape as the initials circle */
+.advisor-photo-wrap {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(10, 61, 36, 0.25);
+  border: 3px solid var(--accent-gold, #cfb53b);
+}
+
+.advisor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.advisor-avatar-caption {
+  flex: 1;
+  min-width: 0;
+}
+
+.advisor-avatar-caption h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-green, #0a3d24);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.advisor-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-gold, #cfb53b);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+}
+
+.advisor-credentials {
+  font-size: 0.9rem;
+  color: var(--text-light, #555);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Bio text */
+.advisor-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.advisor-lead {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary-green, #0a3d24);
+  line-height: 1.7;
+  border-left: 4px solid var(--accent-gold, #cfb53b);
+  padding-left: 1.25rem;
+}
+
+/* Expandable section */
+.advisor-expanded {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.advisor-expanded.visible {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.advisor-expanded p {
+  font-size: 1rem;
+  color: var(--text-light, #555);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.advisor-highlight {
+  background: rgba(207, 181, 59, 0.08);
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-gold, #cfb53b);
+  font-style: italic;
+  color: var(--primary-green, #0a3d24);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Read More / Read Less toggle */
+.advisor-toggle {
+  color: var(--accent-gold, #cfb53b);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+.advisor-toggle:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .boa-title {
+    font-size: 2.2rem;
+  }
+
+  .advisor-avatar-wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .advisor-lead {
+    border-left: none;
+    padding-left: 0;
+    border-top: 4px solid var(--accent-gold, #cfb53b);
+    padding-top: 1rem;
+  }
+}
+
