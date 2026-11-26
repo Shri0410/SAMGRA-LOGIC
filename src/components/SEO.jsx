@@ -1,20 +1,96 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const SEO = ({ title, description, keywords }) => {
-    const defaultTitle = "SAMGRA LOGIC - Strategic Business Consulting & Sustainability Solutions | Samagra";
-    const defaultDescription = "SAMGRA LOGIC (also known as Samgra or Samagra Logic) combines purpose with performance, offering expert sustainability, advisory services, market access, governance, reputation management, and advertising solutions to drive business growth.";
-    const defaultKeywords = "samgra, SAMGRA, samagra, SAMAGRA, samgra logic, SAMGRA LOGIC, samagra logic, business consulting, sustainability, ESG, advisory services, market access, governance, reputation management, advertising, strategic consulting, India, Global";
+    const defaultTitle =
+        "SAMGRA LOGIC | Strategic Business Consulting & Sustainability Solutions";
+
+    const defaultDescription =
+        "SAMGRA LOGIC is a strategic business consulting company providing sustainability, advisory, market access, governance, reputation management, and advertising solutions.";
+
+    const defaultKeywords =
+        "samgra, SAMGRA, samagra, SAMAGRA, samgra logic, SAMGRA LOGIC, samagra logic, business consulting, sustainability, ESG, advisory services, market access, governance, reputation management, advertising, strategic consulting, India, Global";
+
+    const pageTitle = title || defaultTitle;
+    const pageDescription = description || defaultDescription;
+    const pageKeywords = keywords || defaultKeywords;
 
     return (
         <Helmet>
-            <title>{title || defaultTitle}</title>
-            <meta name="description" content={description || defaultDescription} />
-            <meta name="keywords" content={keywords || defaultKeywords} />
-            <meta property="og:title" content={title || defaultTitle} />
-            <meta property="og:description" content={description || defaultDescription} />
-            <meta property="twitter:title" content={title || defaultTitle} />
-            <meta property="twitter:description" content={description || defaultDescription} />
+            {/* Primary SEO */}
+            <title>{pageTitle}</title>
+
+            <meta
+                name="description"
+                content={pageDescription}
+            />
+
+            <meta
+                name="keywords"
+                content={pageKeywords}
+            />
+
+            <meta
+                name="robots"
+                content="index, follow"
+            />
+
+            <link
+                rel="canonical"
+                href="https://samgralogic.com/"
+            />
+
+            {/* Open Graph */}
+            <meta
+                property="og:type"
+                content="website"
+            />
+
+            <meta
+                property="og:url"
+                content="https://samgralogic.com/"
+            />
+
+            <meta
+                property="og:title"
+                content={pageTitle}
+            />
+
+            <meta
+                property="og:description"
+                content={pageDescription}
+            />
+
+            <meta
+                property="og:image"
+                content="https://samgralogic.com/logo.jpg"
+            />
+
+            {/* Twitter */}
+            <meta
+                name="twitter:card"
+                content="summary_large_image"
+            />
+
+            <meta
+                name="twitter:url"
+                content="https://samgralogic.com/"
+            />
+
+            <meta
+                name="twitter:title"
+                content={pageTitle}
+            />
+
+            <meta
+                name="twitter:description"
+                content={pageDescription}
+            />
+
+            <meta
+                name="twitter:image"
+                content="https://samgralogic.com/logo.jpg"
+            />
         </Helmet>
     );
 };

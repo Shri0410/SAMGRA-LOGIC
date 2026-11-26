@@ -121,10 +121,10 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#cta-section"
+              href="#contact"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick("cta-section");
+                handleNavClick("contact");
               }}
             >
               Get Started

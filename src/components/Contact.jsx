@@ -80,17 +80,33 @@ const Contact = () => {
       const baseUrl = import.meta.env.VITE_API_URL
         ? import.meta.env.VITE_API_URL.replace(/\/$/, "")
         : (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
-          ? "http://localhost:5001"
+          ? "http://localhost:5005"
           : "";
-      const apiUrl = `${baseUrl}/api/contact`;
+      let apiUrl = `${baseUrl}/api/contact`;
 
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      let response;
+      try {
+        response = await fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+      } catch (err) {
+        if (baseUrl.includes("5005")) {
+          apiUrl = "http://localhost:5001/api/contact";
+          response = await fetch(apiUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+        } else {
+          throw err;
+        }
+      }
 
       const data = await response.json();
 

@@ -6,6 +6,7 @@ import Mission from "./components/Mission";
 import FocusAreas from "./components/FocusAreas";
 import Audience from "./components/Audience";
 import Partners from "./components/Partners";
+import Contact from "./components/Contact";
 import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
 import SEO from "./components/SEO";
@@ -36,6 +37,7 @@ function App() {
       <CEO />
       <BoardOfAdvisors />
       <Partners />
+      <Contact />
       <CtaSection />
       <Footer />
     </div>
